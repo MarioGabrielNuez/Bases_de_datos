@@ -1,0 +1,6 @@
+Gestión de RSS
+
+* Multiples empresas
+* cada empresa contrata a un empleado
+* cada empleado tiene un contrato y un sueldo de categoria
+* empleados pueden ser contratados por menos de la jornada completa
