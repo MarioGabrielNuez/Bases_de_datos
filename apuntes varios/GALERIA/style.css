@@ -1,0 +1,19 @@
+
+div{
+    position: sticky;
+    display: flex;
+    flex-flow: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: 1s; 
+    width:150px;
+    height:150px;
+    float:left;
+    margin:0.2cm;
+    box-shadow: 2px 2px 2px;
+}
+
+div:hover{
+    width:250px;
+    height:250px;
+}
