@@ -26,4 +26,31 @@ select gama, nombre_cliente, fecha_pago, id_transaccion, total from detalle_pedi
 												inner join cliente on cliente.codigo_cliente = pedido.codigo_cliente
                                                 left join pago on pago.codigo_cliente = cliente.codigo_cliente
                                                 where isnull(id_transaccion);
-                                
+                                                
+select oficina.pais, 
+	   oficina.ciudad,
+	   count(cliente.codigo_cliente) 
+  from cliente inner join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado
+			   inner join oficina on empleado.codigo_oficina = oficina.codigo_oficina
+	           group by oficina.pais,
+						oficina.ciudad;
+                        
+select oficina.pais, 
+	   oficina.ciudad,
+	   count(cliente.codigo_cliente) as Numero_clientes
+  from cliente inner join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado
+			   inner join oficina on empleado.codigo_oficina = oficina.codigo_oficina
+	           group by oficina.pais,
+						oficina.ciudad
+			   having oficina.pais = 'España' and Numero_clientes >= 6;
+                     
+select cliente.nombre_cliente, 
+	   pedido.codigo_pedido 
+  from cliente left join pedido on pedido.codigo_cliente = cliente.codigo_cliente 
+			   where isnull(codigo_pedido);
+                  
+
+select * from cliente;
+select * from detalle_pedido;
+select * from pago;
+select * from pedido;
