@@ -14,3 +14,10 @@ create table if not exists usuarios(
 	falta timestamp default current_timestamp,
 	perfil char(10)
 );
+
+create Table actas (
+	CODIGO INTEGER, 
+    APELNOM CHAR(200),
+    NOTA DOUBLE,
+    CODEXP CHAR(15)
+);
