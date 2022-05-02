@@ -1,11 +1,4 @@
-/*copiar datos de carrito en log cuando se borre un registro*/
+SHOW TRIGGERS;
 
-delimiter //
+DROP TRIGGER GENERATE_ENTREGA;
 
-// delimiter ;
-
-/*rellenar entrega cuando se crea un registro en pedidos*/
-
-delimiter //
-
-// delimiter ;
